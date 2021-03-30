@@ -1,6 +1,6 @@
 FROM node:15.12.0-alpine3.10 as build
 WORKDIR /app
 COPY . .
-RUN npm install && npm build
+RUN npm install && npm run build
 FROM nginx:latest
-COPY --from=build /app /usr/share/nginx/html
+COPY --from=build /app/build /usr/share/nginx/html
