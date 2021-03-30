@@ -1,5 +1,4 @@
-FROM node:lts-alpine3.13 as build
-RUN npm install -g create-react-app
+FROM node:14.8.0-alpine as build
 WORKDIR /app
 COPY . /app
 RUN npm install && npm run build
