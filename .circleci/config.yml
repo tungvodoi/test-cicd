@@ -6,7 +6,7 @@ orbs:
 jobs:
   build-and-push:
     environment:
-      DOCKER_IMAGE: react-docker
+      DOCKER_IMAGE: tung1203/react-docker
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
